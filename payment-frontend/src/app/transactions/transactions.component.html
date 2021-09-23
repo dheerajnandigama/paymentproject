@@ -1,0 +1,38 @@
+<br>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Transfer Date</th>
+      <th scope="col">SenderBIC</th>
+      <th scope="col">Receiver BIC</th>
+      <th scope="col">Receiver Acc No</th>
+      <th scope="col">Receiver Acc Name</th>
+      <th scope="col">Transfer Amount</th>
+      <th scope="col">Transfer Fees</th>
+      <th scope="col">Transfer type </th>
+      <th scope="col">Message code</th>
+      <th scope="col">Currency Code</th> 
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of alltransactions">
+      <td>{{t.transactionid}}</td>
+      <td>{{t.transferdate}}</td>
+      <td>{{t.senderBIC.bic}}</td>
+      <td>{{t.receiverBIC.bic}}</td>
+      <td>{{t.receiveraccountholdernumber}}</td>
+      <td>{{t.receiveraccountholdername}}</td>
+      <td>{{t.inramount}}</td>
+      <td>{{t.transferfees}}</td>
+      <td>{{t.transfertypecode.transfertypecode}}</td>
+      <td>{{t.messagecode.messagecode}}</td>
+      <td>{{t.currencycode.currencycode}}</td>
+   </tr>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" (click)="onSubmit()" class="btn btn-outline-dark ">Return to Dashboard</button>
+  <br>
+  <br>

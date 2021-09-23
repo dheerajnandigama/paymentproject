@@ -1,0 +1,8 @@
+<div class="offset-md-6">
+<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        
+  <li class="nav-item offset-md-2" *ngFor="let item of navitems;let i= index">
+    <a class="nav-link" [routerLink]="item.link"><b>{{item.text}}</b></a>
+  </li>
+</ul>
+</div>
